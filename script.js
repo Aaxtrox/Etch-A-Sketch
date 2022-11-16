@@ -149,3 +149,12 @@ function inputColor() {
     //return color
     return color;
 }
+
+//function clear
+function clear() {
+    //grab all squares
+    const squares = document.querySelectorAll('.square');
+    for (var i = 0; i < squares.length; i++) {
+        squares[i].style.backgroundColor = 'white';
+    }
+}
