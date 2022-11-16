@@ -158,3 +158,9 @@ function clear() {
         squares[i].style.backgroundColor = 'white';
     }
 }
+
+//function random color
+function randomColor() {
+    let color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    return color;
+}
