@@ -25,3 +25,14 @@ if (window.innerWidth < 600) {
     container.style.height = "350px";
     x = 350;
 }
+
+//read value of id my range
+let range = document.getElementById("myRange");
+//call createGrid function with 16 squares per side
+createGrid(16);
+//select all id rangeDisplay
+let rangeDisplay = document.querySelectorAll("#rangeDisplay");
+//inner html of rangeDisplay is range.value
+rangeDisplay.forEach(function(rangeDisplay) {
+    rangeDisplay.innerHTML = 16;
+});
