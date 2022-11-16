@@ -112,3 +112,12 @@ for (let i = 0; i < buttons.length; i++) {
     clearButton.style.backgroundColor = 'white';
     });
 }
+
+//if colorPicker is clicked all other buttons are white
+colorPicker.addEventListener('click', function () {
+    for (let i = 0; i < buttons.length; i++) {
+        if (buttons[i] !== colorPicker) {
+            buttons[i].style.backgroundColor = 'white';
+        }
+    }
+});
