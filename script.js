@@ -141,3 +141,11 @@ clearButton.addEventListener('click', function () {
     clearInterval(randomLoop);
     value = clear();
 });
+
+//function input color
+function inputColor() {
+    // assign input value to variable
+    const color = input.value;
+    //return color
+    return color;
+}
