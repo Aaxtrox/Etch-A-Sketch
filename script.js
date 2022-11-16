@@ -94,3 +94,21 @@ function paint() {
         });
     }
 }
+
+//loop through all buttons
+const buttons = document.querySelectorAll('button');
+for (let i = 0; i < buttons.length; i++) {
+    //add event listener to each button
+    buttons[i].addEventListener('click', function () {
+        //for button clicked change color to rgba(0, 136, 169, 0.5)
+        this.style.backgroundColor = 'rgba(0, 136, 169, 0.5)';
+        //for all other buttons change color to white
+        for (let j = 0; j < buttons.length; j++) {
+            if (buttons[j] !== this) {
+                buttons[j].style.backgroundColor = 'white';
+            }
+        }
+    //button clear white background
+    clearButton.style.backgroundColor = 'white';
+    });
+}
