@@ -36,3 +36,18 @@ let rangeDisplay = document.querySelectorAll("#rangeDisplay");
 rangeDisplay.forEach(function(rangeDisplay) {
     rangeDisplay.innerHTML = 16;
 });
+
+//event listener for range slider
+range.addEventListener("input", function() {
+    squaresPerSide = range.value;
+    //clear grid
+    container.innerHTML = "";
+    //create new grid
+    createGrid(squaresPerSide);
+    //select all id rangeDisplay
+    let rangeDisplay = document.querySelectorAll("#rangeDisplay");
+    //inner html of rangeDisplay is range.value
+    rangeDisplay.forEach(function(rangeDisplay) {
+        rangeDisplay.innerHTML = range.value;
+    });
+});
