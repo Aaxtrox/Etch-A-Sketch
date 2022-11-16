@@ -164,3 +164,11 @@ function randomColor() {
     let color = '#' + Math.floor(Math.random() * 16777215).toString(16);
     return color;
 }
+
+//function infinite random color loop
+function randomColorLoop() {
+    randomLoop = setInterval(function () {
+        value = randomColor();
+    }, 50);
+    return value, randomLoop;
+}
