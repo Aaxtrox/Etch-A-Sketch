@@ -51,3 +51,22 @@ range.addEventListener("input", function() {
         rangeDisplay.innerHTML = range.value;
     });
 });
+
+//create grid
+function createGrid(squaresPerSide) {
+    //calculate square size based on number of squares per side and size of container div 600px and border 2px
+    let squareSize = (x - (squaresPerSide * 2)) / squaresPerSide;
+        //create grid of squares squaresPerSide x squaresPerSide
+        for (let i = 0; i < squaresPerSide; i++) {
+            for (let j = 0; j < squaresPerSide; j++) {
+                let square = document.createElement("div");
+                square.classList.add("square");
+                square.style.width = squareSize + "px";
+                square.style.height = squareSize + "px";
+                //add border to each square
+                square.style.border = "1px solid black";
+                container.appendChild(square);
+            }
+        }
+    paint();
+}
