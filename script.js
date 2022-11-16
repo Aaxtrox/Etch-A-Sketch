@@ -70,3 +70,27 @@ function createGrid(squaresPerSide) {
         }
     paint();
 }
+
+let trigger = false;
+let value;
+let randomLoop;
+
+//function on mouse click and mouseover
+function paint() {
+    let squares = document.querySelectorAll(".square");
+    //change color of div on mousedown and mouseover
+    for (var i = 0; i < squares.length; i++) {
+        squares[i].addEventListener('mousedown', function () {
+            trigger = true;
+            this.style.backgroundColor = value;
+        });
+        squares[i].addEventListener('mouseup', function () {
+            trigger = false;
+        });
+        squares[i].addEventListener('mouseover', function () {
+            if (trigger) {
+                this.style.backgroundColor = value;
+            }
+        });
+    }
+}
