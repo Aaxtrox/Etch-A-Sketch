@@ -121,3 +121,23 @@ colorPicker.addEventListener('click', function () {
         }
     }
 });
+
+//add event listener to pick color button
+pickColor.addEventListener('click', function () {
+    clearInterval(randomLoop);
+    value = inputColor();
+});
+//add event listener to random button
+random.addEventListener('click', function () {
+    value = randomColorLoop();
+});
+//add event listener to eraser button
+eraserButton.addEventListener('click', function () {
+    clearInterval(randomLoop);
+    value = 'white';
+});
+//add event listener to clear button
+clearButton.addEventListener('click', function () {
+    clearInterval(randomLoop);
+    value = clear();
+});
